@@ -9,6 +9,11 @@
   src: url("./assets/Fonts/m42.TTF");
 }
 
+@font-face {
+  font-family: "Wagon";
+  src: url("./assets/Fonts/Wagon-Bold.otf");
+}
+
 html,
 body,
 #root {
@@ -36,6 +41,8 @@ body,
   font-size: 2.6vw;
   background: rgb(241, 241, 42);
   flex-direction: column;
+  position: relative;
+  z-index: 1000;
 }
 
 .item {
@@ -75,4 +82,23 @@ body,
       width: 100%;
     }
   }
+}
+
+.main-page {
+  display: flex;
+}
+
+.textBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Wagon";
+  font-size: 5.6vw;
+  background: rgb(170, 79, 255);
 }

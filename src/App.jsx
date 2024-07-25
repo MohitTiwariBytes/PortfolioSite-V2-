@@ -1,6 +1,7 @@
 import "./App.css";
 import gsap from "gsap";
 import { useEffect } from "react";
+import myImage from "./assets/myImage.png";
 
 function App() {
   useEffect(() => {
@@ -8,6 +9,7 @@ function App() {
 
     function animateFromTop() {
       const introPage = document.getElementById("intro-page");
+      const mainPage = document.getElementById("main-page");
       let tl = gsap.timeline({ ease: "power4.inOut" });
 
       tl.set(".transition-container .tile", { pointerEvents: "none" });
@@ -27,11 +29,14 @@ function App() {
       });
       tl.set(".transition-container .tile", { top: "0", height: "0" });
       tl.set(".transition-container .tile", { pointerEvents: "all" });
-      tl.set(introPage, {
-        y: 1000,
-        duration: 0.6,
-        ease: "power1.inOut",
-        onComplete: () => (introPage.style.display = "none"),
+
+      // Animate width to 0 and then set display to none
+      tl.to(introPage, {
+        duration: 0.5,
+        height: "0%",
+        onComplete: () => {
+          introPage.style.display = "none";
+        },
       });
     }
 
@@ -68,6 +73,14 @@ function App() {
             <h1>你好</h1>
             <h1>안녕하세요</h1>
             <h1>Ciao!</h1>
+          </div>
+        </div>
+
+        <div id="main-page" className="main-page">
+          <div className="textBackground">
+            <h1>Mohit</h1>
+            <h1>Tiwari</h1>
+            <h1>Dev</h1>
           </div>
         </div>
       </div>
