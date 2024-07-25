@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "m42";
+  src: url("./assets/Fonts/m42.TTF");
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.main-home-page {
+  height: 100%;
+  width: 100%;
+}
+
+.home-page {
+  height: 100%;
+  width: 100%;
+}
+
+.intro-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "m42";
+  font-size: 2.6vw;
+  background: rgb(241, 241, 42);
+  flex-direction: column;
+}
+
+.item {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item h1 {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+.transition-container {
+  position: fixed;
+  left: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 10;
+  pointer-events: none;
+  span {
+    position: relative;
+  }
+
+  &.from-top {
+    span {
+      background: rgb(0, 0, 0);
+      height: 0%;
+      width: 100%;
+    }
+  }
+}
