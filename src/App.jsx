@@ -2,6 +2,7 @@ import "./App.css";
 import gsap from "gsap";
 import { useEffect } from "react";
 import myImage from "./assets/myImage.png";
+import Button from "./Components/Button";
 
 function App() {
   useEffect(() => {
@@ -102,6 +103,11 @@ function App() {
             </div>
             <div className="wrapper">
               <h1>Mohit</h1>
+              
+
+          <div className="button">
+            <Button text={"Mohit"}></Button>
+          </div>
             </div>
             <div className="wrapper">
               <h1>Tiwari</h1>
