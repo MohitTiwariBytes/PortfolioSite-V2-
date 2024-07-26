@@ -21,6 +21,7 @@ const Cursor = () => {
   return (
     <div
       ref={cursorRef}
+      className="cursor"
       style={{
         position: "absolute",
         top: position.y,

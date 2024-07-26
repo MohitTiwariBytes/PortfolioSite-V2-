@@ -53,6 +53,7 @@ function App() {
               stagger: 0.1,
             }
           );
+
           gsap.fromTo(
             navbar,
             {
@@ -118,6 +119,7 @@ function App() {
             <h1>Shalom!</h1>
             <h1>Zdravo!</h1>
             <h1>Γειά σου!</h1>
+            <h1>@#%$^!&!</h1>
           </div>
         </div>
 

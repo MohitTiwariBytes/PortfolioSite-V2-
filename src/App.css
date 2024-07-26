@@ -152,3 +152,27 @@ body,
 .nav-items span:hover {
   scale: 1.1;
 }
+
+@media (max-width: 876px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+  }
+
+  .left {
+    margin-top: 30px;
+  }
+
+  .nav-items {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-right: 0;
+  }
+  .cursor {
+    display: none;
+  }
+}
