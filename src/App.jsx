@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useEffect } from "react";
 import myImage from "./assets/myImage.png";
 import Button from "./Components/Button";
+import Cursor from "./Components/CustomCursor";
 
 function App() {
   useEffect(() => {
@@ -62,7 +63,7 @@ function App() {
       timeline
         .set(h1, { opacity: 0, visibility: "hidden" })
         .to(h1, { opacity: 1, visibility: "visible", duration: 0 })
-        .to(h1, { duration: 0.2 })
+        .to(h1, { duration: 0.1 })
         .to(h1, { opacity: 0, visibility: "hidden", duration: 0 });
     });
     timeline.add(() => animateFromTop(), `+=0.3`);
@@ -70,6 +71,8 @@ function App() {
 
   return (
     <div className="main-home-page">
+      <div className="bg"></div>
+      <Cursor></Cursor>
       <div className="home-page">
         <div id="intro-page" className="intro-page">
           <div className="transition-container from-top">
@@ -87,33 +90,28 @@ function App() {
             <h1>Hola!</h1>
             <h1>你好</h1>
             <h1>안녕하세요</h1>
+            <h1>Ciao!</h1> <h1>Hello!</h1>
+            <h1>नमस्ते</h1>
+            <h1>こんにちは</h1>
+            <h1>Hola!</h1>
+            <h1>你好</h1>
+            <h1>안녕하세요</h1>
             <h1>Ciao!</h1>
+            <h1>Salut!</h1>
+            <h1>Olá!</h1>
+            <h1>Hallo!</h1>
+            <h1>Shalom!</h1>
+            <h1>Zdravo!</h1>
+            <h1>Γειά σου!</h1>
           </div>
         </div>
 
         <div id="main-page" className="main-page">
-          <div className="textBackground">
-            <div className="image">
-              <img
-                style={{ position: "absolute", zIndex: "100" }}
-                height={"800px"}
-                src={myImage}
-                alt=""
-              />
-            </div>
-            <div className="wrapper">
-              <h1>Mohit</h1>
-              
-
-          <div className="button">
-            <Button text={"Mohit"}></Button>
-          </div>
-            </div>
-            <div className="wrapper">
-              <h1>Tiwari</h1>
-            </div>
-            <div className="wrapper">
-              <h1>Dev</h1>
+          <div className="first-section">
+            <div className="text">
+              <div className="wrapper">
+                <h1>MohitTiwariDev</h1>
+              </div>
             </div>
           </div>
         </div>
