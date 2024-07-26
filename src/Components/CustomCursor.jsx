@@ -30,8 +30,7 @@ const Cursor = () => {
         backgroundColor: "rgb(241, 241, 42)",
         borderRadius: "50%",
         pointerEvents: "none",
-        zIndex: 1000,
-        transition: "all 0.2s ease-out",
+        zIndex: 10000000,
         mixBlendMode: "difference",
       }}
     />

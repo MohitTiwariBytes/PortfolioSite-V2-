@@ -9,6 +9,7 @@ function App() {
   useEffect(() => {
     const h1Elements = document.querySelectorAll(".item h1");
     const wrapperH1Elements = document.querySelectorAll(".wrapper h1");
+    const navbar = document.getElementById("navbar");
 
     function animateFromTop() {
       const introPage = document.getElementById("intro-page");
@@ -43,6 +44,20 @@ function App() {
             {
               top: "1000px",
               y: "1700px",
+            },
+            {
+              top: "0px",
+              y: "0px",
+              duration: 1,
+              ease: "power4.out",
+              stagger: 0.1,
+            }
+          );
+          gsap.fromTo(
+            navbar,
+            {
+              top: "-1000px",
+              y: "-1000px",
             },
             {
               top: "0px",
@@ -107,6 +122,16 @@ function App() {
         </div>
 
         <div id="main-page" className="main-page">
+          <div id="navbar" className="navbar">
+            <div className="left">
+              <h1>MohitTiwariDev</h1>
+            </div>
+            <div className="nav-items">
+              <span>HOME</span>
+              <span>ABOUT</span>
+              <span>CONTACT</span>
+            </div>
+          </div>
           <div className="first-section">
             <div className="text">
               <div className="wrapper">
