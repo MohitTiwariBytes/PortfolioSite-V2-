@@ -19,6 +19,11 @@
   src: url("./assets/Fonts/Satoshi-Bold.otf");
 }
 
+@font-face {
+  font-family: "Heming";
+  src: url("./assets/Fonts/Heming.ttf");
+}
+
 html,
 body,
 #root {
@@ -96,6 +101,7 @@ body,
   display: flex;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
 .wrapper {
@@ -153,6 +159,31 @@ body,
   scale: 1.1;
 }
 
+.marquee {
+  width: 100%;
+  position: absolute;
+  top: 600px;
+}
+
+.top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  margin-top: -80px;
+  font-family: "Heming";
+}
+
+.top h1 {
+  font-size: 25px;
+}
+
+.text {
+  margin-top: 30px;
+}
+
 @media (max-width: 876px) {
   .navbar {
     flex-direction: column;
@@ -174,5 +205,11 @@ body,
   }
   .cursor {
     display: none;
+  }
+
+  html,
+  body,
+  #root {
+    cursor: default;
   }
 }

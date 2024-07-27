@@ -135,6 +135,11 @@ function App() {
             </div>
           </div>
           <div className="first-section">
+            <div className="top">
+              <div className="wrapper">
+                <h1>THIS IS.. </h1>
+              </div>
+            </div>
             <div className="text">
               <div className="wrapper">
                 <h1>MohitTiwariDev</h1>
