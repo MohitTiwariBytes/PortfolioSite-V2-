@@ -18,7 +18,43 @@ const Navbar = () => {
     setHoveredItem(null);
   };
 
+  const [isApeared, setIsApeared] = useState(false);
+
   useEffect(() => {
+    if (!isApeared) {
+      gsap.fromTo(
+        ".navbar",
+        {
+          height: "0",
+          top: "-400px",
+        },
+        {
+          top: "0px",
+          height: "150px",
+          duration: 1,
+          ease: "power4.out",
+          onComplete: () => {
+            gsap.fromTo(
+              ".navbar",
+              {
+                borderBottomLeftRadius: "0px",
+                borderBottomRightRadius: "0px",
+              },
+              {
+                borderBottomLeftRadius: "50px",
+                borderBottomRightRadius: "50px",
+                duration: 0.5,
+                ease: "power4.out",
+                onComplete: () => {
+                  setIsApeared(true);
+                },
+              }
+            );
+          },
+        }
+      );
+    }
+
     if (active) {
       gsap.fromTo(
         ".navbar",
