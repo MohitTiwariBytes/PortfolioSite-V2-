@@ -12,27 +12,10 @@ const Navbar = () => {
 
   const handleMouseEnter = (index) => {
     setHoveredItem(index);
-    gsap.to(`.ham-items .wrapper:nth-child(${index + 1}) span`, {
-      scale: 1.2,
-      color: "black",
-      duration: 0.3,
-      ease: "power2.out",
-    });
-    gsap.to(`.ham-items span:not(:nth-child(${index + 1}))`, {
-      color: "gray",
-      duration: 0.3,
-      ease: "power2.out",
-    });
   };
 
   const handleMouseLeave = () => {
     setHoveredItem(null);
-    gsap.to(".ham-items span", {
-      scale: 1,
-      color: "black",
-      duration: 0.3,
-      ease: "power2.out",
-    });
   };
 
   useEffect(() => {
@@ -53,8 +36,6 @@ const Navbar = () => {
                 top: "150px",
                 opacity: 0,
                 rotate: 200,
-                scale: 0.5,
-                color: "black",
               },
               {
                 rotate: 0,
@@ -63,22 +44,9 @@ const Navbar = () => {
                 duration: 0.5,
                 ease: "power4.out",
                 stagger: 0.1,
-                scale: 1,
               }
             );
           },
-        }
-      );
-      gsap.fromTo(
-        ".hamButton .line1, .hamButton .line2",
-        {
-          scaleX: 0,
-        },
-        {
-          scaleX: 1.1,
-          duration: 0.5,
-          ease: "power4.out",
-          stagger: 0.2,
         }
       );
     } else {
@@ -87,19 +55,12 @@ const Navbar = () => {
         top: "150px",
         duration: 1,
         opacity: 0,
-        scale: 0.5,
         ease: "power4.out",
       });
       gsap.to(".navbar", {
         height: "150px",
         duration: 1,
         ease: "power4.out",
-      });
-      gsap.to(".hamButton .line1, .hamButton .line2", {
-        scaleX: 1,
-        duration: 0.5,
-        ease: "power4.out",
-        stagger: 0.2,
       });
     }
   }, [active]);
@@ -127,6 +88,14 @@ const Navbar = () => {
             <span
               onMouseEnter={() => handleMouseEnter(0)}
               onMouseLeave={handleMouseLeave}
+              style={{
+                color:
+                  hoveredItem === 0
+                    ? "black"
+                    : hoveredItem !== null
+                    ? "gray"
+                    : "black",
+              }}
             >
               Home
             </span>
@@ -135,6 +104,14 @@ const Navbar = () => {
             <span
               onMouseEnter={() => handleMouseEnter(1)}
               onMouseLeave={handleMouseLeave}
+              style={{
+                color:
+                  hoveredItem === 1
+                    ? "black"
+                    : hoveredItem !== null
+                    ? "gray"
+                    : "black",
+              }}
             >
               About
             </span>
@@ -143,6 +120,14 @@ const Navbar = () => {
             <span
               onMouseEnter={() => handleMouseEnter(2)}
               onMouseLeave={handleMouseLeave}
+              style={{
+                color:
+                  hoveredItem === 2
+                    ? "black"
+                    : hoveredItem !== null
+                    ? "gray"
+                    : "black",
+              }}
             >
               Projects
             </span>
@@ -151,6 +136,14 @@ const Navbar = () => {
             <span
               onMouseEnter={() => handleMouseEnter(3)}
               onMouseLeave={handleMouseLeave}
+              style={{
+                color:
+                  hoveredItem === 3
+                    ? "black"
+                    : hoveredItem !== null
+                    ? "gray"
+                    : "black",
+              }}
             >
               Contact
             </span>

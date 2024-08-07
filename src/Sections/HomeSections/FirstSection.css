@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.first-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 4rem;
+  color: #000;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title span {
+  display: inline-block;
+  margin: 0 2px;
+  transition: transform 0.3s ease-in-out;
+}
