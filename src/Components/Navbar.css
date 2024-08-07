@@ -1,50 +1,101 @@
-.main-navbar{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-
+.main-navbar {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.navbar{
-    width: 90%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border: 2px solid black;
-    border-bottom-left-radius: 23px;
-    border-bottom-right-radius: 23px;
-    border-top: none;
-    padding: 23px;
+.navbar {
+  width: 90%;
+  height: 150px;
+  border: 2px solid black;
+  border-bottom-left-radius: 23px;
+  border-bottom-right-radius: 23px;
+  border-top: none;
+  padding: 0px 23px;
+  overflow: hidden;
 }
 
-.right{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+.right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.hamButton{
-    padding: 23px;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
+.hamButton {
+  padding: 23px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.line1, .line2{
-    width: 90%;
-    height: 2px;
-    background: black;
-    mix-blend-mode: difference;
+.line1,
+.line2 {
+  width: 90%;
+  height: 2px;
+  background: black;
+  transition: all 0.2s ease;
 }
 
-.hamButton:hover{
-    background: black;
+.line1.active {
+  transform: rotate(45deg);
+}
+
+.line2.active {
+  transform: rotate(-45deg);
+  margin-top: -6px;
+}
+
+.hamButton:hover {
+  background: black;
+}
+
+.hamButton:hover .line1,
+.hamButton:hover .line2 {
+  background-color: white;
+}
+
+.top {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.ham-items span {
+  font-size: 80px;
+  position: relative;
+  top: 150px;
+}
+
+.ham-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 440px) {
+  .hamButton {
+    padding: 0px;
+  }
+
+  .line1,
+  .line2 {
+    width: 70%;
+  }
 }
