@@ -1,23 +1,81 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+#root,
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 
-.first-section {
+@font-face {
+  font-family: "Aalto";
+  src: url(../Fonts/Aalto.otf);
+}
+
+@font-face {
+  font-family: "Dirtyline";
+  src: url("../../Fonts/Dirtyline.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.first-section-main {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: white;
+  border-bottom: 1px solid black;
 }
 
-.title {
-  font-family: "Press Start 2P", cursive;
-  font-size: 4rem;
-  color: #000;
+.first-section-main h1 {
+  font-family: "Dirtyline";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11vw;
+  letter-spacing: 2px;
+}
+
+.front-text {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: default;
 }
 
-.title span {
-  display: inline-block;
-  margin: 0 2px;
-  transition: transform 0.3s ease-in-out;
+.bottom {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.location {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-weight: 600;
+  cursor: default;
+}
+
+.frontend {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-weight: 600;
+  cursor: default;
+}
+
+@media (max-width: 386px) {
+  .location {
+    font-size: 4vw;
+  }
+
+  .frontend {
+    font-size: 4vw;
+  }
 }

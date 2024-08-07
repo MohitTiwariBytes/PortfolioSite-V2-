@@ -1,20 +1,43 @@
 import React, { useEffect } from "react";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import "./FirstSection.css";
 
 const FirstSection = () => {
   useEffect(() => {
     gsap.fromTo(
-      ".title span",
+      ".text-main h1",
       {
-        opacity: 0,
-        y: 100,
+        y: "1700px",
       },
       {
-        opacity: 1,
-        y: 0,
-        skewX: 0,
-        duration: 1,
+        y: "0px",
+        duration: 1.1,
+        ease: "power4.out",
+        stagger: 0.1,
+      }
+    );
+
+    gsap.fromTo(
+      ".frontend p",
+      {
+        y: "1700px",
+      },
+      {
+        y: "0px",
+        duration: 1.1,
+        ease: "power4.out",
+        stagger: 0.1,
+      }
+    );
+
+    gsap.fromTo(
+      ".location p",
+      {
+        y: "1700px",
+      },
+      {
+        y: "0px",
+        duration: 1.1,
         ease: "power4.out",
         stagger: 0.1,
       }
@@ -22,24 +45,22 @@ const FirstSection = () => {
   }, []);
 
   return (
-    <div className="first-section">
-      <div className="title">
-        <span>M</span>
-        <span>o</span>
-        <span>h</span>
-        <span>i</span>
-        <span>t</span>
-        <span>&nbsp;</span>
-        <span>T</span>
-        <span>i</span>
-        <span>w</span>
-        <span>a</span>
-        <span>r</span>
-        <span>i</span>
-        <span>&nbsp;</span>
-        <span>D</span>
-        <span>e</span>
-        <span>v</span>
+    <div className="first-section-main">
+      <div className="first-section">
+        <div className="front-text">
+          <div className="text-main">
+            <h1>MohitTiwariDev</h1>
+          </div>
+        </div>
+
+        <div className="bottom">
+          <div className="frontend">
+            <p>13 yo front-end dev</p>
+          </div>
+          <div className="location">
+            <p>Uttar-Pradesh, India</p>
+          </div>
+        </div>
       </div>
     </div>
   );

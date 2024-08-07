@@ -6,6 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000000;
 }
 
 .navbar {
@@ -17,6 +18,9 @@
   border-top: none;
   padding: 0px 23px;
   overflow: hidden;
+  background: white;
+  position: fixed;
+  z-index: 1000000;
 }
 
 .right {
@@ -74,7 +78,6 @@
 
 .wrapper {
   overflow: hidden;
-  width: 280px;
 }
 
 .ham-items span {
@@ -84,6 +87,7 @@
   opacity: 0;
   cursor: pointer;
   transition: color 0.2s ease;
+  font-family: sans-serif;
 }
 
 .ham-items span:hover {
