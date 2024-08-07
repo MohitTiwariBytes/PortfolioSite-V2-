@@ -138,12 +138,36 @@ body,
   display: flex;
   align-items: center;
   padding: 0 50px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8.5px);
-  -webkit-backdrop-filter: blur(3.5px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+.nav-items {
+  display: flex;
+  gap: 20px; 
+}
+
+.nav-items span {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-items span::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s, top 0.3s;
+}
+
+.nav-items span:hover::before {
+  opacity: 1;
+  top: 0;
+}
+
+
 
 .nav-items {
   width: 100%;

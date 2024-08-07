@@ -1,6 +1,6 @@
 import "./App.css";
 import gsap from "gsap";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import myImage from "./assets/myImage.png";
 import Button from "./Components/Button";
 import Cursor from "./Components/CustomCursor";
@@ -10,6 +10,7 @@ function App() {
     const h1Elements = document.querySelectorAll(".item h1");
     const wrapperH1Elements = document.querySelectorAll(".wrapper h1");
     const navbar = document.getElementById("navbar");
+
 
     function animateFromTop() {
       const introPage = document.getElementById("intro-page");
@@ -72,9 +73,8 @@ function App() {
       });
     }
 
-    const timeline = gsap.timeline();
 
-    // Animation for h1 elements in .item
+    const timeline = gsap.timeline();
     h1Elements.forEach((h1, index) => {
       timeline
         .set(h1, { opacity: 0, visibility: "hidden" })
@@ -91,7 +91,8 @@ function App() {
       <Cursor></Cursor>
       <div className="home-page">
         <div id="intro-page" className="intro-page">
-          <div className="transition-container from-top">
+          {/* I got this transition from codepen.... */}
+          <div className="transition-container from-top"> 
             <span className="tile"></span>
             <span className="tile"></span>
             <span className="tile"></span>
@@ -99,7 +100,8 @@ function App() {
             <span className="tile"></span>
             <span className="tile"></span>
           </div>
-          <div className="item">
+          {/* codepen code ends */}
+          <div className="item"> 
             <h1>Hello!</h1>
             <h1>नमस्ते</h1>
             <h1>こんにちは</h1>
@@ -135,16 +137,7 @@ function App() {
             </div>
           </div>
           <div className="first-section">
-            <div className="top">
-              <div className="wrapper">
-                <h1>THIS IS.. </h1>
-              </div>
-            </div>
-            <div className="text">
-              <div className="wrapper">
-                <h1>MohitTiwariDev</h1>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
