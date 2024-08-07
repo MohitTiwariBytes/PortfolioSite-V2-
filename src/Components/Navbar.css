@@ -74,12 +74,20 @@
 
 .wrapper {
   overflow: hidden;
+  width: 280px;
 }
 
 .ham-items span {
   font-size: 80px;
   position: relative;
   top: 150px;
+  opacity: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.ham-items span:hover {
+  color: black;
 }
 
 .ham-items {

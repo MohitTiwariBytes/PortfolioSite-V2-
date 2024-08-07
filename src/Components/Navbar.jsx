@@ -4,9 +4,18 @@ import gsap from "gsap";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleClick = () => {
     setActive(!active);
+  };
+
+  const handleMouseEnter = (index) => {
+    setHoveredItem(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
   };
 
   useEffect(() => {
@@ -76,16 +85,68 @@ const Navbar = () => {
         </div>
         <div className="ham-items">
           <div className="wrapper">
-            <span>Home</span>
+            <span
+              onMouseEnter={() => handleMouseEnter(0)}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                color:
+                  hoveredItem === 0
+                    ? "black"
+                    : hoveredItem !== null
+                    ? "gray"
+                    : "black",
+              }}
+            >
+              Home
+            </span>
           </div>
           <div className="wrapper">
-            <span>About</span>
+            <span
+              onMouseEnter={() => handleMouseEnter(1)}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                color:
+                  hoveredItem === 1
+                    ? "black"
+                    : hoveredItem !== null
+                    ? "gray"
+                    : "black",
+              }}
+            >
+              About
+            </span>
           </div>
           <div className="wrapper">
-            <span>Projects</span>
+            <span
+              onMouseEnter={() => handleMouseEnter(2)}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                color:
+                  hoveredItem === 2
+                    ? "black"
+                    : hoveredItem !== null
+                    ? "gray"
+                    : "black",
+              }}
+            >
+              Projects
+            </span>
           </div>
           <div className="wrapper">
-            <span>Contact</span>
+            <span
+              onMouseEnter={() => handleMouseEnter(3)}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                color:
+                  hoveredItem === 3
+                    ? "black"
+                    : hoveredItem !== null
+                    ? "gray"
+                    : "black",
+              }}
+            >
+              Contact
+            </span>
           </div>
         </div>
       </div>
