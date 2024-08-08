@@ -70,12 +70,12 @@ body {
   cursor: default;
 }
 
-@media (max-width: 386px) {
-  .location {
-    font-size: 4vw;
+@media (max-width: 500px) {
+  .location p {
+    font-size: 3.5vw;
   }
 
-  .frontend {
-    font-size: 4vw;
+  .frontend p {
+    font-size: 3.5vw;
   }
 }
