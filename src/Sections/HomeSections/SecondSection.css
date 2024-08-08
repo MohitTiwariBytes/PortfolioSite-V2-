@@ -6,6 +6,55 @@
   align-items: center;
 }
 
+.second-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+}
+
 .left {
-  width: 40%;
+  width: 70%;
+}
+
+.right img {
+  border: 2px solid black;
+  border-radius: 40px;
+  height: 250px;
+  cursor: pointer;
+}
+
+@media (max-width: 849px) {
+  .left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 665px) {
+  .main-second-section {
+    height: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .second-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+  }
+
+  .left {
+    width: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
