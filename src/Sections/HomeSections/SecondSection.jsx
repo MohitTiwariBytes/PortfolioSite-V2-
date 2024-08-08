@@ -21,8 +21,8 @@ const SecondSection = () => {
 
       gsap.to(image, {
         duration: 0.5,
-        rotationY: deltaX * 40, // rotation area
-        rotationX: -deltaY * 40,
+        rotationY: deltaX * 20, //rotation
+        rotationX: -deltaY * 20,
         ease: "power2.out",
       });
     };
@@ -48,17 +48,23 @@ const SecondSection = () => {
   return (
     <div className="main-second-section">
       <div className="second-section">
-        <div className="right">
-          <img ref={imageRef} src={myImage} alt="" />
-        </div>
-
         <div className="left">
           <p>
             <u>Hello!</u> This is <strong>Mohit Tiwari</strong> (aka
-            MohitTiwariDev) I am a Front-End Developer based in India, I am{" "}
+            MohitTiwariDev). I am a Front-End Developer based in India, I am{" "}
             <u>13 years old</u> (if I ever forget about updating my age, 6 June
-            2011 is my birthday!)
+            2011 is my birthday!). In addition to web development, I enjoy
+            learning about new technologies and improving my skills.
           </p>
+          <p>
+            I have worked on various projects including interactive web
+            applications, games, and more. Feel free to explore my work and get
+            in touch if you have any questions!
+          </p>
+          <button className="contact-button">Contact Me</button>
+        </div>
+        <div className="right2">
+          <img ref={imageRef} src={myImage} alt="Mohit Tiwari" />
         </div>
       </div>
     </div>

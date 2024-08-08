@@ -4,6 +4,7 @@
   padding: 24px;
   display: flex;
   align-items: center;
+  perspective: 1000px;
 }
 
 .second-section {
@@ -18,11 +19,35 @@
   width: 70%;
 }
 
-.right img {
+.right2 {
+  width: 30%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.right2 img {
   border: 2px solid black;
   border-radius: 40px;
   height: 250px;
   cursor: pointer;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.contact-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0c0c0c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #2c2c2c;
 }
 
 @media (max-width: 849px) {
@@ -41,7 +66,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     gap: 50px;
   }
 
@@ -56,5 +80,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
   }
 }
