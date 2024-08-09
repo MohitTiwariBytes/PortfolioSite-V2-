@@ -1,6 +1,5 @@
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:4137048064.
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:4017736418.
 import React, { useState, useEffect, useRef } from "react";
+import "../App.css"
 
 const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });

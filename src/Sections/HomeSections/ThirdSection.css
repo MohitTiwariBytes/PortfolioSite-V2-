@@ -21,9 +21,40 @@
   height: 100%;
   display: flex;
   margin-left: 23px;
+  flex-direction: column;
 }
 
 .p1 {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  margin-top: 50px;
+  border-bottom: 1px solid gray;
+}
+
+.p2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  border-bottom: 1px solid gray;
+}
+
+.p3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  border-bottom: 1px solid gray;
+}
+
+.p {
+  cursor: none;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 33px;
 }
