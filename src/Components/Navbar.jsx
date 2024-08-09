@@ -140,6 +140,9 @@ const Navbar = () => {
             <span
               onMouseEnter={() => handleMouseEnter(1)}
               onMouseLeave={handleMouseLeave}
+              onClick={() => {
+                window.location.replace("/about");
+              }}
               style={{
                 color:
                   hoveredItem === 1
