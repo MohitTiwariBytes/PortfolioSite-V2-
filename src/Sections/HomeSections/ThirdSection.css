@@ -1,0 +1,29 @@
+.third-section-main {
+  height: 100%;
+  width: 100%;
+}
+
+.topProjects {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.topProjects h1 {
+  font-size: 5vw;
+  margin-left: 30px;
+  text-decoration: underline;
+}
+
+.projects {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-left: 23px;
+}
+
+.p1 {
+  display: flex;
+  flex-direction: row;
+}

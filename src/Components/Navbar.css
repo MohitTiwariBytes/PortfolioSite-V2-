@@ -113,3 +113,9 @@
     font-size: 6.2vw;
   }
 }
+
+@media (max-width: 386px) {
+  .ham-items span {
+    font-size: 20.2vw;
+  }
+}
