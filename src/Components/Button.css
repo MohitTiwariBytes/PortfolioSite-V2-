@@ -31,7 +31,7 @@
 }
 
 @media (max-width: 670px) {
-  .main-button button {
+  .main-button button{
     padding: 3vw;
   }
 }

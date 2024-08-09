@@ -4,7 +4,7 @@ import Navbar from "../Components/Navbar";
 import FirstSection from "../Sections/HomeSections/FirstSection";
 import SecondSection from "../Sections/HomeSections/SecondSection";
 import ThirdSection from "../Sections/HomeSections/ThirdSection";
-
+import FourthSection from "../Sections/HomeSections/FourthSection";
 import CustomCursor from "../Components/CustomCursor";
 
 const Home = () => {
@@ -15,6 +15,7 @@ const Home = () => {
         <FirstSection />
         <SecondSection />
         <ThirdSection></ThirdSection>
+        <FourthSection></FourthSection>
       </div>
     </div>
   );

@@ -49,7 +49,15 @@
 }
 
 .p {
-  cursor: none;
+  padding: 23px;
+  transition: all 0.2s ease;
+}
+
+.p:hover {
+  background: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .info {
@@ -57,4 +65,18 @@
   display: flex;
   justify-content: flex-end;
   margin-right: 33px;
+}
+
+@media (max-width: 1341px) {
+  .p1,
+  .p2,
+  .p3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+  }
 }
