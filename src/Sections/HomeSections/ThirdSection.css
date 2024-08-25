@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+.main-div {
+  height: 100%;
+}
+
 .topProjects h1 {
   font-size: 5vw;
   margin-left: 30px;
