@@ -10,13 +10,13 @@
 
 .navbar {
   width: 90%;
-  height: 0px;
+  height: 156px;
   border: 2px solid black;
   border-top: none;
   padding: 0px 23px;
   overflow: hidden;
   background: white;
-  position: fixed;
+  position: sticky;
   z-index: 1000000;
 }
 
